@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>IoT_Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='test.css') }}" />
+  </head>
+  <body>
+    <div id="title">A car</div>
+    <div align="center">
+      <img src="{{ url_for('video_feed') }}" width="20%" />
+    </div>
+    
+    <table align="center">
+      <tr>
+        <td></td>
+        <td>
+          <form action="/forward" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='forward.png') }}" />
+          </form>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <form action="/left" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='left.png') }}" />
+          </form>
+        </td>
+        <td>
+          <form action="/stop" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='stop.png') }}" />
+          </form>
+        </td>
+        <td>
+          <form action="/right" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='right.png') }}" />
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <form action="/backleft" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='backleft.png') }}" />
+          </form>
+        </td>
+        <td>
+          <form action="/back" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='back.png') }}" />
+          </form>
+        </td>
+        <td>
+          <form action="/backright" method="post">
+            <input type="image" class="img" src="{{ url_for('static', filename='backright.png') }}" />
+          </form>
+        </td>
+      </tr>
+    <table div align="center">
+     <tr>
+      <td>
+        <form action="/camleft" method="post">
+          <input type="image" class="img2" src="{{ url_for('static', filename='camleft.png') }}" />
+        </form>
+      </td>
+      <td>
+          <input type="image" class="img2" src="{{ url_for('static', filename='camera.png') }}" />
+        </form>
+      </td>
+      <td>
+       <form action="/camright" method="post">
+         <input type="image" class="img2" src="{{ url_for('static', filename='camright.png') }}" />
+       </form>
+      </td>
+      </tr>
+    </div>
+    </table>
+        
+    </table>
+    <div class="speedChoice" align="center">
+     <form action="/speedControl" method="post">
+	  <p>speed control:	</p>
+         <input type="radio" id="s1" name="speed" value="1"
+			 checked>
+		 <label for="s1">4</label>
+		 
+		 <input type="radio" id="s2" name="speed" value="3">
+		 <label for="s2">3</label>
+ 
+		 <input type="radio" id="s3" name="speed" value="5">
+		 <label for="s3">2</label>
+		 
+		 <input type="radio" id="s4" name="speed" value="7">		 
+		 <label for="s4">1</label>
+			 
+         <input type="submit" value="submit" />
+	 </form>
+	</div>
+
+      
+    
+  </body>
+</html>
+<script>
+  var speedChoice = document.getElementByName("speed");
+
+  speedChoice.oninput = function() {
+    output.innerHTML = this.value;
+  };
+</script>

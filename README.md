@@ -4,4 +4,5 @@ More informations : https://hackmd.io/@kinako890419/BkMh0sGRP
   
 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
-![](https://imgur.com/pUCrkRX.gif)
+<img src="https://imgur.com/pUCrkRX.png" alt="Cover" width="20%"/>
+
